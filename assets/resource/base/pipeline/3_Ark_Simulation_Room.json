@@ -1,0 +1,120 @@
+{
+    "Enter_Ark_To_Simulation_Room": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["方舟"],
+        "next": ["Enter_Simulation_Room", "Sub_Flag_In_Home"]
+    },
+    "Enter_Simulation_Room": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["模拟室"],
+        "next": ["The_Simulation_Process", "Pre_Start_The_Simulation"]
+    },
+    "Pre_Start_The_Simulation": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["开始模拟"],
+        "next": ["Select_The_Simulation_Difficulty"]
+    },
+    "Select_The_Simulation_Difficulty": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": "difficulty",
+        "index": 3,
+        "next": ["Select_The_Simulation_Region"]
+    },
+    "Select_The_Simulation_Region": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": "131,090+",
+        "next": ["Start_The_Simulation"]
+    },
+    "Start_The_Simulation": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["开始模拟"],
+        "next": ["The_Simulation_Process"]
+    },
+
+    "The_Simulation_Process": {
+        "recognition": "OCR",
+        "expected": ["通关奖励"],
+        "next": ["Simulation_Complete", "SelectGainBuff", "Check_In_Simulation_Case"]
+    },
+
+    "Simulation_Complete": {
+        "recognition": "OCR",
+        "expected": ["已通关该难度的最后一个地区"],
+        "next": ["After_Simulation_Complete", "Flag_In_Home", "Sub_Return"]
+    },
+
+    "After_Simulation_Complete": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["模拟结束"],
+        "next": ["Gain_Effect", "Sub_Click_On_The_Blank_To_Skip"]
+    },
+
+    "SelectGainBuff": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": ["请选择增益效果"],
+        "next": ["Gain_Effect"]
+    },
+    "Gain_Effect": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["EPIC", "SSR", "SR", "R"],
+        "next": ["Affirm"]
+    },
+
+    "Check_In_Simulation_Case": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["RESET TIME"],
+        "next": ["Pre_Automatic_Formation", "Sub_Click_On_The_Blank_To_Skip"]
+    },
+
+    "Pre_Automatic_Formation": {
+        "recognition": "OCR",
+        "expected": ["编队"],
+        "action": "Click",
+        "next": ["Automatic_Formation"]
+    },
+
+    "Automatic_Formation": {
+        "recognition": "OCR",
+        "expected": ["自动编队"],
+        "action": "Click",
+        "next": ["After_Automatic_Formation"]
+    },
+
+    "After_Automatic_Formation": {
+        "recognition": "OCR",
+        "expected": ["储存"],
+        "action": "Click",
+        "next": ["Check_In_Pre_Battle", "SelectBattleNode", "StrengthenAttributes"]
+    },
+
+    "Check_In_Pre_Battle": {
+        "recognition": "OCR",
+        "expected": ["歼灭战"],
+        "next": ["Finish_Battle", "Quick_Battle", "Sub_Battle"]
+    },
+
+    "SelectBattleNode": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["HARD", "NORMAL", "获得"]
+    },
+    "StrengthenAttributes": {
+        "recognition": "OCR",
+        "expected": ["属性提升"],
+        "action": "Click",
+        "next": ["SelectStrengthenAttributes", "Sub_Affirm", "The_Simulation_Process"]
+    }
+}

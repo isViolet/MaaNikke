@@ -1,0 +1,21 @@
+{
+    "Enter_Friends": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["好友"],
+        "next": ["Give_Friendship_Point", "Sub_Flag_In_Home"]
+    },
+    "Give_Friendship_Point": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["赠送"],
+        "index": 1,
+        "next": ["Affirm_Friendship_Point", "Click_On_The_Blank_To_Skip"]
+    },
+    "Affirm_Friendship_Point": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["确认"]
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "Enter_Ark_To_Interceptions": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["方舟"],
+        "next": ["Enter_Interceptions", "Sub_Flag_In_Home"]
+    },
+
+    "Enter_Interceptions": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["拦截战"],
+        "next": ["Enter_Special_Interception"]
+    },
+
+    "Enter_Special_Interception": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["特殊目标拦截战"],
+        "next": ["Interception_Battle_Process"]
+    },
+
+    "Interception_Battle_Process": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["快速战斗"],
+        "next": [
+            "Exit_Special_Interception",
+            "Msg_No_Battle_Interception",
+            "Sub_Finish_Battle",
+            "Sub_Quick_Battle"
+        ]
+    },
+
+    "Exit_Special_Interception": {
+        "recognition": "OCR",
+        "expected": ["已超出进入次数"],
+        "next": ["Flag_In_Home", "Sub_Return"]
+    },
+
+    "Msg_No_Battle_Interception": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["每日至少游玩1次之后"],
+        "next": ["Battle"]
+    }
+}

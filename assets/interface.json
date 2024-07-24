@@ -17,59 +17,37 @@
     "resource": [
         {
             "name": "官服",
-            "path": [
-                "{PROJECT_DIR}/resource/base"
-            ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource/base",
-                "{PROJECT_DIR}/resource/bilibili"
-            ]
+            "path": ["{PROJECT_DIR}/resource/base"]
         }
     ],
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "启动加速器",
+            "entry": "Process_Start_Accelerate_Game"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "唤醒NIKKE",
+            "entry": "StartUpAndLogin"
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "param": {}
+            "name": "友情点",
+            "entry": "Enter_Friends"
+        },
+        {
+            "name": "基地奖励",
+            "entry": "Enter_Outpost"
+        },
+        {
+            "name": "拦截战",
+            "entry": "Enter_Ark_To_Interceptions"
+        },
+        {
+            "name": "模拟室",
+            "entry": "Enter_Ark_To_Simulation_Room"
+        },
+        {
+            "name": "关闭加速器",
+            "entry": "Process_Stop_Accelerate_Game"
         }
-    ],
-    "option": {
-        "任务选项1": {
-            "cases": [
-                {
-                    "name": "文本1",
-                    "param": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "param": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    ]
 }

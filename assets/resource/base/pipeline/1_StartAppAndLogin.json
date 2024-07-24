@@ -1,0 +1,47 @@
+{
+    "StartUpAndLogin": {
+        "next": [
+            "Flag_In_Home",
+            "Close_Activity_Notice",
+            "Login",
+            "Login_Server",
+            "Skip_Notice",
+            "StartApp"
+        ]
+    },
+
+    "Close_Activity_Notice": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["活动公告"],
+        "next": ["Click_On_The_Blank_To_Skip"]
+    },
+
+    "Login": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["TOUCH TO CONTINUE"]
+    },
+
+    "Login_Server": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["服务器选择"],
+        "next": ["Affirm"]
+    },
+
+    "Skip_Notice": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "一周内不再显示",
+        "next": ["Click_On_The_Blank_To_Skip"]
+    },
+
+    "StartApp": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.proximabeta.nikke/com.shiftup.nk.MainActivity"
+    }
+}

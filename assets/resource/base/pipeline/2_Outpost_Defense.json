@@ -1,0 +1,26 @@
+{
+    "Enter_Outpost": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["%"],
+        "next": ["Outpost_Dialy", "Sub_Flag_In_Home"]
+    },
+    "Outpost_Dialy": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["举"],
+        "next": ["Outpost_Do_Dialy"]
+    },
+    "Outpost_Do_Dialy": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["进行"],
+        "next": ["Sub_Cancel", "Sub_Reward", "Obtain_Outpost"]
+    },
+    "Obtain_Outpost": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["获得奖励"],
+        "next": ["Flag_In_Home", "Sub_Reward"]
+    }
+}
