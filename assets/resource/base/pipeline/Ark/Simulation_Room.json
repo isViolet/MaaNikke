@@ -1,4 +1,7 @@
 {
+    "Process_Into_Simulation_Room": {
+        "next": ["The_Simulation_Process", "Enter_Simulation_Room", "Enter_Ark_To_Simulation_Room"]
+    },
     "Enter_Ark_To_Simulation_Room": {
         "recognition": "OCR",
         "action": "Click",
@@ -115,6 +118,12 @@
         "recognition": "OCR",
         "expected": ["属性提升"],
         "action": "Click",
-        "next": ["SelectStrengthenAttributes", "Sub_Affirm", "The_Simulation_Process"]
+        "next": ["SelectStrengthenAttributes"]
+    },
+    "SelectStrengthenAttributes": {
+        "recognition": "OCR",
+        "expected": ["第一个选项"],
+        "action": "Click",
+        "next": ["Sub_Affirm", "The_Simulation_Process"]
     }
 }

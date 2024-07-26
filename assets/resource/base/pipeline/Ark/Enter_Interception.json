@@ -1,0 +1,44 @@
+{
+    "Process_Enter_Interception": {
+        "next": [
+            "Interception_Quick_Battle",
+            "Enter_Special_Interception",
+            "Enter_Interceptions",
+            "Enter_Ark",
+            "Sub_Flag_In_Home"
+        ]
+    },
+
+    "Interception_Quick_Battle": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["快速战斗"],
+        "next": [
+            "Exit_Special_Interception",
+            "Msg_No_Battle_Interception",
+            "Sub_Finish_Battle",
+            "Sub_Quick_Battle"
+        ]
+    },
+
+    "Enter_Ark": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["方舟"]
+    },
+
+    "Enter_Interceptions": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["拦截战"]
+    },
+
+    "Enter_Special_Interception": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["目标拦截战"]
+    }
+}

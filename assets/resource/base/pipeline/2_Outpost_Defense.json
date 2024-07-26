@@ -2,7 +2,7 @@
     "Enter_Outpost": {
         "recognition": "OCR",
         "action": "Click",
-        "expected": ["%"],
+        "expected": ["0%,1%,2%,3%,4%,5%,6%,7%,8%,9%"],
         "next": ["Outpost_Dialy", "Sub_Flag_In_Home"]
     },
     "Outpost_Dialy": {
@@ -21,6 +21,6 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": ["获得奖励"],
-        "next": ["Flag_In_Home", "Sub_Reward"]
+        "next": ["Sub_Reward", "Flag_In_Home"]
     }
 }
