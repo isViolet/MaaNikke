@@ -1,5 +1,7 @@
 {
     "StartUpAndLogin": {
+        "action": "StartApp",
+        "package": "com.proximabeta.nikke/com.shiftup.nk.MainActivity",
         "next": [
             "Flag_In_Home",
             "Close_Activity_Notice",
@@ -13,7 +15,6 @@
     "Close_Activity_Notice": {
         "is_sub": true,
         "recognition": "OCR",
-        "action": "Click",
         "expected": ["活动公告"],
         "next": ["Click_On_The_Blank_To_Skip"]
     },
@@ -29,7 +30,7 @@
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["服务器选择"],
-        "next": ["Affirm"]
+        "next": ["Login","Affirm"]
     },
 
     "Skip_Notice": {

@@ -5,7 +5,7 @@
     "Check_In_Accelerator": {
         "recognition": "OCR",
         "expected": ["我的"],
-        "next": ["NIKKE_Acceleration", "Recognition_Notice", "Mobile_Game_Acceleration"]
+        "next": ["NIKKE_Acceleration", "Close_Notice", "Mobile_Game_Acceleration"]
     },
     "NIKKE_Acceleration": {
         "recognition": "OCR",
@@ -34,13 +34,8 @@
         "expected": ["恢复并加速"],
         "action": "Click"
     },
-    "Recognition_Notice": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["首次下单7折优惠"],
-        "next": ["Close_Notice"]
-    },
     "Close_Notice": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
         "action": "Click",
         "threshold": 0.3,
@@ -67,7 +62,7 @@
     "Process_Stop_Accelerate_Game": {
         "next": [
             "Pre_Pause_Accelerate",
-            "Recognition_Notice",
+            "Close_Notice",
             "Flag_In_Stop_Accelerator",
             "Check_Not_In_Accelerator"
         ]

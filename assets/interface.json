@@ -31,15 +31,15 @@
         },
         {
             "name": "友情点",
-            "entry": "Enter_Friends"
+            "entry": "Process_Get_Friendship_Point"
         },
         {
             "name": "基地奖励",
-            "entry": "Enter_Outpost"
+            "entry": "Process_Outpost"
         },
         {
             "name": "拦截战",
-            "entry": "Process_Into_Special_Interception"
+            "entry": "Process_Enter_Interception"
         },
         {
             "name": "模拟室",
