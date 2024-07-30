@@ -108,5 +108,9 @@
     "Unachievable_Task": {
         "recognition": "OCR",
         "expected": ["@@@@@@@@@@@"]
+    },
+    "Check_In_Battle": {
+        "recognition": "OCR",
+        "expected": ["AUTO"]
     }
 }

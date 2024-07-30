@@ -1,14 +1,16 @@
 {
-  "Exit_Special_Interception": {
-    "recognition": "OCR",
-    "expected": ["已超出进入次数"],
-    "next": ["Flag_In_Home", "Sub_Return"]
-  },
+    "Process_Interception": {
+        "next": [
+            "Process_Exit_Interception",
+            "Check_Finish_Battle",
+            "Sub_Quick_Battle"
+        ]
+    },
 
-  "Msg_No_Battle_Interception": {
-    "is_sub": true,
-    "recognition": "OCR",
-    "expected": ["每日至少游玩1次之后"],
-    "next": ["Battle"]
-  }
+    "Check_Finish_Battle": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["每日至少游玩1次之后"],
+        "next": ["Finish_Battle", "Check_In_Battle", "Sub_Battle"]
+    }
 }

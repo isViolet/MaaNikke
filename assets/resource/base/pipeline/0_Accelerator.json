@@ -5,7 +5,11 @@
     "Check_In_Accelerator": {
         "recognition": "OCR",
         "expected": ["我的"],
-        "next": ["NIKKE_Acceleration", "Close_Notice", "Mobile_Game_Acceleration"]
+        "next": [
+            "NIKKE_Acceleration",
+            "Close_Notice",
+            "Mobile_Game_Acceleration"
+        ]
     },
     "NIKKE_Acceleration": {
         "recognition": "OCR",
@@ -34,7 +38,7 @@
         "expected": ["恢复并加速"],
         "action": "Click"
     },
-    "Close_Notice": {
+    "Close_Accelerate_Ad_Notice": {
         "is_sub": true,
         "recognition": "TemplateMatch",
         "action": "Click",

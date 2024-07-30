@@ -1,6 +1,6 @@
 {
     "Process_Get_Friendship_Point": {
-        "next": ["Give_Friendship_Point", "Enter_Friends","Sub_Flag_In_Home"]
+        "next": ["Give_Friendship_Point", "Enter_Friends", "Sub_Flag_In_Home"]
     },
     "Enter_Friends": {
         "is_sub": true,

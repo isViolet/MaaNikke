@@ -43,7 +43,7 @@
         },
         {
             "name": "模拟室",
-            "entry": "Enter_Ark_To_Simulation_Room"
+            "entry": "Process_Into_Simulation_Room"
         },
         {
             "name": "关闭加速器",
