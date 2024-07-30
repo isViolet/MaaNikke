@@ -1,5 +1,7 @@
 {
     "Process_Interception": {
+        "recognition": "OCR",
+        "expected": ["快速战斗"],
         "next": [
             "Process_Exit_Interception",
             "Check_Finish_Battle",
