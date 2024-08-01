@@ -1,18 +1,49 @@
 {
+    "Process_Enter_Interception": {
+        "next": [
+            "Process_Interception",
+            "Enter_Special_Interception",
+            "Enter_Interceptions",
+            "Enter_Ark",
+            "Sub_Flag_In_Home"
+        ]
+    },
+    "Enter_Special_Interception": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["目标拦截战"]
+    },
+    "Enter_Interceptions": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["拦截战"]
+    },
+    "Enter_Ark": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["方舟"]
+    },
+
     "Process_Interception": {
         "recognition": "OCR",
         "expected": ["快速战斗"],
-        "next": [
-            "Process_Exit_Interception",
-            "Check_Finish_Battle",
-            "Sub_Quick_Battle"
-        ]
+        "action": "Click",
+        "next": ["Process_Exit_Interception", "NoBattle", "Sub_Quick_Battle"]
     },
 
-    "Check_Finish_Battle": {
+    "NoBattle": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["每日至少游玩1次之后"],
-        "next": ["Finish_Battle", "Sub_Check_In_Battle", "Sub_Battle"]
+        "next": ["Process_Battle"]
+    },
+
+    "Process_Exit_Interception": {
+        "recognition": "OCR",
+        "expected": ["已超出进入次数"],
+        "next": ["Process_Return_Home"]
     }
 }

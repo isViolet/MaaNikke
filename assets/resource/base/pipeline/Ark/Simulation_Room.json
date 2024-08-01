@@ -1,6 +1,10 @@
 {
     "Process_Into_Simulation_Room": {
-        "next": ["The_Simulation_Process", "Enter_Simulation_Room", "Enter_Ark_To_Simulation_Room"]
+        "next": [
+            "The_Simulation_Process",
+            "Enter_Simulation_Room",
+            "Enter_Ark_To_Simulation_Room"
+        ]
     },
     "Enter_Ark_To_Simulation_Room": {
         "recognition": "OCR",
@@ -43,7 +47,11 @@
     "The_Simulation_Process": {
         "recognition": "OCR",
         "expected": ["通关奖励"],
-        "next": ["Simulation_Complete", "SelectGainBuff", "Check_In_Simulation_Case"]
+        "next": [
+            "Simulation_Complete",
+            "SelectGainBuff",
+            "Check_In_Simulation_Case"
+        ]
     },
 
     "Simulation_Complete": {
@@ -99,13 +107,17 @@
         "recognition": "OCR",
         "expected": ["储存"],
         "action": "Click",
-        "next": ["Check_In_Pre_Battle", "SelectBattleNode", "StrengthenAttributes"]
+        "next": [
+            "Check_In_Pre_Battle",
+            "SelectBattleNode",
+            "StrengthenAttributes"
+        ]
     },
 
     "Check_In_Pre_Battle": {
         "recognition": "OCR",
         "expected": ["歼灭战"],
-        "next": ["Finish_Battle", "Quick_Battle", "Sub_Battle"]
+        "next": ["Process_Battle"]
     },
 
     "SelectBattleNode": {
@@ -118,12 +130,13 @@
         "recognition": "OCR",
         "expected": ["属性提升"],
         "action": "Click",
-        "next": ["SelectStrengthenAttributes"]
+        "next": ["SelectStrengthenAttributes", "The_Simulation_Process"]
     },
     "SelectStrengthenAttributes": {
+        "is_sub": true,
         "recognition": "OCR",
         "expected": ["第一个选项"],
         "action": "Click",
-        "next": ["Sub_Affirm", "The_Simulation_Process"]
+        "next": ["Affirm"]
     }
 }

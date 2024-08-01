@@ -13,7 +13,7 @@
     },
     "NIKKE_Acceleration": {
         "recognition": "OCR",
-        "expected": ["NIKKE：胜利女神"],
+        "expected": ["NIKKE"],
         "action": "Click",
         "next": ["Click_To_Start", "Start_Accelerating"]
     },

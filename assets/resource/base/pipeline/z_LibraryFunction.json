@@ -109,15 +109,33 @@
         "recognition": "OCR",
         "expected": ["@@@@@@@@@@@"]
     },
-    "Sub_Check_In_Battle": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["AUTO"]
-    },
+
     "Sub_Close_Notice": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["活动公告", "一周内不再显示"],
         "next": ["Click_On_The_Blank_To_Skip"]
+    },
+
+    "Process_Battle": {
+        "next": ["Finish_Battle", "In_Battle", "Click_Battle"]
+    },
+
+    "Click_Battle": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["快速战斗"],
+        "action": "Click",
+        "next": ["Battle", "Click_On_The_Blank_To_Skip"]
+    },
+
+    "In_Battle": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["AUTO"]
+    },
+
+    "Process_Return_Home": {
+        "next": ["Flag_In_Home", "Sub_Return"]
     }
 }

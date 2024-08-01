@@ -1,7 +1,0 @@
-{
-    "Process_Exit_Interception": {
-        "recognition": "OCR",
-        "expected": ["已超出进入次数"],
-        "next": ["Flag_In_Home", "Sub_Return"]
-    }
-}
