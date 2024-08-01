@@ -4,10 +4,10 @@
     },
     "Check_In_Accelerator": {
         "recognition": "OCR",
-        "expected": ["我的"],
+        "expected": ["手游加速"],
         "next": [
             "NIKKE_Acceleration",
-            "Close_Notice",
+            "Close_Accelerate_Ad_Notice",
             "Mobile_Game_Acceleration"
         ]
     },
@@ -54,7 +54,7 @@
     "Check_Not_In_Accelerator": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["我的"],
+        "expected": ["手游加速"],
         "inverse": true,
         "next": ["Start_Accelerator_App"]
     },
@@ -66,7 +66,7 @@
     "Process_Stop_Accelerate_Game": {
         "next": [
             "Pre_Pause_Accelerate",
-            "Close_Notice",
+            "Sub_Close_Notice",
             "Flag_In_Stop_Accelerator",
             "Check_Not_In_Accelerator"
         ]

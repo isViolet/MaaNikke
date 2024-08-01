@@ -27,6 +27,11 @@
 2. 点击 TOUCH LOGIN 后依旧会检测到服务器选择，导致会一直识别确认但不存在确认的问题，进行修复
 3. 修复基地奖励领取的识别文本错误
 
+### 2024/8/1
+
+1. 整合前哨基地任务派遣和每日奖励领取
+2. fix bug
+
 ## 致谢
 
 > 本仓库为 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 所提供的项目模板，开发者可基于此模板直接创建自己的 MaaXXX 项目。MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中

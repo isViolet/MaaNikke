@@ -13,6 +13,6 @@
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["每日至少游玩1次之后"],
-        "next": ["Finish_Battle", "Check_In_Battle", "Sub_Battle"]
+        "next": ["Finish_Battle", "Sub_Check_In_Battle", "Sub_Battle"]
     }
 }

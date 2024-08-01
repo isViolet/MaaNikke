@@ -2,14 +2,12 @@
     "StartUpAndLogin": {
         "action": "StartApp",
         "package": "com.proximabeta.nikke/com.shiftup.nk.MainActivity",
-        "next": ["Flag_In_Home", "Close_Notice", "Process_Login", "StartApp"]
-    },
-
-    "Close_Notice": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["活动公告", "一周内不再显示"],
-        "next": ["Click_On_The_Blank_To_Skip"]
+        "next": [
+            "Flag_In_Home",
+            "Sub_Close_Notice",
+            "Process_Login",
+            "StartApp"
+        ]
     },
 
     "Process_Login": {

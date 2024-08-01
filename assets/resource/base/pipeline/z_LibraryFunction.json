@@ -109,8 +109,15 @@
         "recognition": "OCR",
         "expected": ["@@@@@@@@@@@"]
     },
-    "Check_In_Battle": {
+    "Sub_Check_In_Battle": {
+        "is_sub": true,
         "recognition": "OCR",
         "expected": ["AUTO"]
+    },
+    "Sub_Close_Notice": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["活动公告", "一周内不再显示"],
+        "next": ["Click_On_The_Blank_To_Skip"]
     }
 }

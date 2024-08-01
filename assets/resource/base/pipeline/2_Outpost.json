@@ -1,0 +1,97 @@
+{
+    "Process_Outpost": {
+        "next": [
+            "Process_Outpost_Dispatch",
+            "Enter_Outpost",
+            "Sub_Flag_In_Home"
+        ]
+    },
+
+    "Process_Outpost_Dispatch": {
+        "recognition": "OCR",
+        "action": "Click",
+        "target_offset": [0, -25, 0, 0],
+        "expected": ["派遣公告栏", "派遣等级范围"],
+        "next": ["Process_Do_Outpost_Dispatch", "Gain_All_Reward", "Sub_Reward"]
+    },
+
+    "Enter_Outpost": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["前哨基地"],
+        "action": "Click"
+    },
+    "Process_Outpost_Reward": {
+        "recognition": "OCR",
+        "expected": ["目前没有可进行的派遣任务"],
+        "next": [
+            "Outpost_Sweep",
+            "Pre_Outpost_Sweep",
+            "Enter_Outpost_Reward",
+            "Click_On_The_Blank_To_Skip"
+        ]
+    },
+
+    "Process_Do_Outpost_Dispatch": {
+        "recognition": "OCR",
+        "expected": ["没有已完成的派遣"],
+        "next": ["All_Dispatch"]
+    },
+    "All_Dispatch": {
+        "recognition": "OCR",
+        "expected": ["全部派遣"],
+        "action": "Click",
+        "next": ["Process_Outpost_Reward", "Dispatch"]
+    },
+    "Dispatch": {
+        "recognition": "OCR",
+        "expected": ["派遣"],
+        "action": "Click",
+        "target": [451, 1225, 56, 31],
+        "next": ["Process_Outpost_Reward"]
+    },
+
+    "Gain_All_Reward": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["全部领取"],
+        "action": "Click"
+    },
+
+    "Outpost_Sweep": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["进行歼灭"],
+        "next": ["Sub_Cancel", "Sub_Reward", "Obtain_Outpost"]
+    },
+    "Obtain_Outpost": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["获得奖励"],
+        "next": ["Sub_Reward", "Sub_Return", "Flag_In_Home"]
+    },
+    "Pre_Outpost_Sweep": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["歼灭"]
+    },
+    "Enter_Outpost_Reward": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "0%",
+            "1%",
+            "2%",
+            "3%",
+            "4%",
+            "5%",
+            "6%",
+            "7%",
+            "8%",
+            "9%",
+            "LV"
+        ]
+    }
+}
