@@ -3,15 +3,15 @@
         "next": [
             "Process_Outpost_Dispatch",
             "Enter_Outpost",
-            "Sub_Flag_In_Home"
+            "Sub_Process_Return_Home"
         ]
     },
 
     "Process_Outpost_Dispatch": {
         "recognition": "OCR",
         "action": "Click",
-        "target_offset": [0, -25, 0, 0],
-        "expected": ["派遣公告栏", "派遣等级范围"],
+        "target_offset": [0, -20, 0, 0],
+        "expected": ["派遣"],
         "next": ["Process_Do_Outpost_Dispatch", "Gain_All_Reward", "Sub_Reward"]
     },
 
@@ -28,7 +28,7 @@
             "Outpost_Sweep",
             "Pre_Outpost_Sweep",
             "Enter_Outpost_Reward",
-            "Click_On_The_Blank_To_Skip"
+            "Sub_Click_Empty"
         ]
     },
 
@@ -48,7 +48,7 @@
         "expected": ["派遣"],
         "action": "Click",
         "target": [451, 1225, 56, 31],
-        "next": ["Process_Outpost_Reward"]
+        "next": ["All_Dispatch"]
     },
 
     "Gain_All_Reward": {

@@ -1,29 +1,37 @@
 {
-    "Process_Into_Simulation_Room": {
+    "Process_Simulation_Room": {
+        "timeout_next": ["Sub_Process_Return_Home", "Process_Simulation_Room"],
         "next": [
-            "The_Simulation_Process",
+            "Process_Battle_Simulation_Room",
+            "Pre_Start_The_Simulation",
             "Enter_Simulation_Room",
-            "Enter_Ark_To_Simulation_Room"
+            "Enter_Ark"
         ]
     },
-    "Enter_Ark_To_Simulation_Room": {
+    "Process_Battle_Simulation_Room": {
         "recognition": "OCR",
-        "action": "Click",
-        "expected": ["方舟"],
-        "next": ["Enter_Simulation_Room", "Sub_Flag_In_Home"]
-    },
-    "Enter_Simulation_Room": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["模拟室"],
-        "next": ["The_Simulation_Process", "Pre_Start_The_Simulation"]
+        "expected": ["通关奖励"],
+        "next": [
+            "Simulation_Complete",
+            "SelectGainBuff",
+            "Check_In_Simulation_Case"
+        ]
     },
     "Pre_Start_The_Simulation": {
+        "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["开始模拟"],
         "next": ["Select_The_Simulation_Difficulty"]
     },
+    "Enter_Simulation_Room": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["模拟室"],
+        "next": ["Click_Empty"]
+    },
+
     "Select_The_Simulation_Difficulty": {
         "recognition": "OCR",
         "action": "Click",
@@ -40,32 +48,7 @@
     "Start_The_Simulation": {
         "recognition": "OCR",
         "action": "Click",
-        "expected": ["开始模拟"],
-        "next": ["The_Simulation_Process"]
-    },
-
-    "The_Simulation_Process": {
-        "recognition": "OCR",
-        "expected": ["通关奖励"],
-        "next": [
-            "Simulation_Complete",
-            "SelectGainBuff",
-            "Check_In_Simulation_Case"
-        ]
-    },
-
-    "Simulation_Complete": {
-        "recognition": "OCR",
-        "expected": ["已通关该难度的最后一个地区"],
-        "next": ["After_Simulation_Complete", "Flag_In_Home", "Sub_Return"]
-    },
-
-    "After_Simulation_Complete": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["模拟结束"],
-        "next": ["Gain_Effect", "Sub_Click_On_The_Blank_To_Skip"]
+        "expected": ["开始模拟"]
     },
 
     "SelectGainBuff": {
@@ -86,7 +69,7 @@
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["RESET TIME"],
-        "next": ["Pre_Automatic_Formation", "Sub_Click_On_The_Blank_To_Skip"]
+        "next": ["Pre_Automatic_Formation", "Sub_Click_Empty"]
     },
 
     "Pre_Automatic_Formation": {
@@ -130,7 +113,7 @@
         "recognition": "OCR",
         "expected": ["属性提升"],
         "action": "Click",
-        "next": ["SelectStrengthenAttributes", "The_Simulation_Process"]
+        "next": ["SelectStrengthenAttributes", "Process_Battle_Simulation_Room"]
     },
     "SelectStrengthenAttributes": {
         "is_sub": true,
@@ -138,5 +121,18 @@
         "expected": ["第一个选项"],
         "action": "Click",
         "next": ["Affirm"]
+    },
+    "Simulation_Complete": {
+        "recognition": "OCR",
+        "expected": ["已通关该难度的最后一个地区"],
+        "next": ["After_Simulation_Complete", "Flag_In_Home", "Sub_Return"]
+    },
+
+    "After_Simulation_Complete": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["模拟结束"],
+        "next": ["Gain_Effect", "Sub_Click_Empty"]
     }
 }

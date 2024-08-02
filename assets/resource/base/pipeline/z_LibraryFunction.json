@@ -1,63 +1,46 @@
 {
+    "Process_Return_Home": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": ["大厅"],
+        "next": ["Flag_In_Home", "Sub_Return", "Sub_Click_Empty"]
+    },
+    "Sub_Process_Return_Home": {
+        "inverse": true,
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["大厅"],
+        "next": ["Flag_In_Home", "Sub_Return", "Sub_Click_Empty"]
+    },
     "Flag_In_Home": {
         "recognition": "OCR",
         "action": "Click",
         "expected": ["大厅"]
     },
-    "Sub_Flag_In_Home": {
+
+    "Process_Battle": {
+        "next": ["Finish_Battle", "In_Battle", "Click_Battle", "Sub_Battle"]
+    },
+    "Sub_Process_Quick_Battle": {
         "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["大厅"]
-    },
-    "Click_On_The_Blank_To_Skip": {
-        "action": "Click",
-        "target": [10, 10, 10, 10]
-    },
-    "Sub_Click_On_The_Blank_To_Skip": {
-        "is_sub": true,
-        "action": "Click",
-        "target": [10, 10, 10, 10]
-    },
-    "Quick_Battle": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["快速战斗"]
-    },
-    "Sub_Quick_Battle": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["快速战斗"]
-    },
-    "Affirm": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["确认"]
-    },
-    "Affirm_To_Affirm": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["确认"],
-        "times_limit": 5,
-        "next": ["Affirm_To_Affirm"]
-    },
-    "Sub_Affirm": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["确认"]
+        "next": ["Finish_Battle", "Quick_Battle"]
     },
     "Finish_Battle": {
         "recognition": "OCR",
         "action": "Click",
         "expected": ["点击任意处进行下一步"]
     },
-    "Sub_Finish_Battle": {
+    "In_Battle": {
         "is_sub": true,
         "recognition": "OCR",
+        "expected": ["AUTO"]
+    },
+    "Click_Battle": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["快速战斗"],
         "action": "Click",
-        "expected": ["点击任意处进行下一步"]
+        "next": ["Battle", "Click_Empty"]
     },
     "Battle": {
         "recognition": "OCR",
@@ -70,28 +53,33 @@
         "action": "Click",
         "expected": ["进入战斗"]
     },
-    "Return": {
+    "Quick_Battle": {
         "recognition": "OCR",
         "action": "Click",
-        "expected": "返回"
+        "expected": ["快速战斗"]
     },
+
+    "Click_Empty": {
+        "action": "Click",
+        "target": [10, 10, 10, 10]
+    },
+    "Sub_Click_Empty": {
+        "is_sub": true,
+        "action": "Click",
+        "target": [10, 10, 10, 10]
+    },
+
+    "Affirm": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["确认"]
+    },
+
     "Sub_Return": {
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": "返回"
-    },
-    "Cancel": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["取消"]
-    },
-    "Cancel_To_Cancel": {
-        "recognition": "OCR",
-        "action": "Click",
-        "times_limit": 5,
-        "expected": ["取消"],
-        "next": ["Cancel_To_Cancel"]
     },
     "Sub_Cancel": {
         "is_sub": true,
@@ -105,37 +93,10 @@
         "action": "Click",
         "expected": ["点击领取奖励"]
     },
-    "Unachievable_Task": {
-        "recognition": "OCR",
-        "expected": ["@@@@@@@@@@@"]
-    },
-
     "Sub_Close_Notice": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["活动公告", "一周内不再显示"],
-        "next": ["Click_On_The_Blank_To_Skip"]
-    },
-
-    "Process_Battle": {
-        "next": ["Finish_Battle", "In_Battle", "Click_Battle"]
-    },
-
-    "Click_Battle": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["快速战斗"],
-        "action": "Click",
-        "next": ["Battle", "Click_On_The_Blank_To_Skip"]
-    },
-
-    "In_Battle": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["AUTO"]
-    },
-
-    "Process_Return_Home": {
-        "next": ["Flag_In_Home", "Sub_Return"]
+        "next": ["Click_Empty"]
     }
 }

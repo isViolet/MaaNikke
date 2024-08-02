@@ -39,11 +39,11 @@
         },
         {
             "name": "拦截战",
-            "entry": "Process_Enter_Interception"
+            "entry": "Process_Interception"
         },
         {
             "name": "模拟室",
-            "entry": "Process_Into_Simulation_Room"
+            "entry": "Process_Simulation_Room"
         },
         {
             "name": "关闭加速器",

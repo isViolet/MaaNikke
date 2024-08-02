@@ -1,11 +1,11 @@
 {
-    "Process_Enter_Interception": {
+    "Process_Interception": {
+        "timeout_next": ["Sub_Process_Return_Home", "Process_Interception"],
         "next": [
-            "Process_Interception",
+            "Process_Battle_Interception",
             "Enter_Special_Interception",
             "Enter_Interceptions",
-            "Enter_Ark",
-            "Sub_Flag_In_Home"
+            "Enter_Ark"
         ]
     },
     "Enter_Special_Interception": {
@@ -27,11 +27,15 @@
         "expected": ["方舟"]
     },
 
-    "Process_Interception": {
+    "Process_Battle_Interception": {
         "recognition": "OCR",
         "expected": ["快速战斗"],
         "action": "Click",
-        "next": ["Process_Exit_Interception", "NoBattle", "Sub_Quick_Battle"]
+        "next": [
+            "Process_Exit_Interception",
+            "NoBattle",
+            "Sub_Process_Quick_Battle"
+        ]
     },
 
     "NoBattle": {

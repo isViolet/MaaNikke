@@ -1,6 +1,10 @@
 {
     "Process_Get_Friendship_Point": {
-        "next": ["Give_Friendship_Point", "Enter_Friends", "Sub_Flag_In_Home"]
+        "next": [
+            "Give_Friendship_Point",
+            "Enter_Friends",
+            "Sub_Process_Return_Home"
+        ]
     },
     "Enter_Friends": {
         "is_sub": true,
@@ -13,7 +17,7 @@
         "action": "Click",
         "expected": ["赠送"],
         "index": 1,
-        "next": ["Affirm_Friendship_Point", "Click_On_The_Blank_To_Skip"]
+        "next": ["Affirm_Friendship_Point", "Click_Empty"]
     },
     "Affirm_Friendship_Point": {
         "is_sub": true,
