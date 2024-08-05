@@ -66,4 +66,7 @@ adb shell "dumpsys window w |grep \/ |grep name="
 
 adb shell screencap -p /sdcard/screen.png
 adb pull /sdcard/screen.png
+
+netstat -ano | findstr :8080
+taskkill /F /PID 26940
 ```

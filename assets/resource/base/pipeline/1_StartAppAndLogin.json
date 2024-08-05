@@ -1,23 +1,14 @@
 {
     "StartUpAndLogin": {
+        "timeout": 20000,
+        "timeout_next": ["StartUpAndLogin"],
         "action": "StartApp",
         "package": "com.proximabeta.nikke/com.shiftup.nk.MainActivity",
-        "next": [
-            "Flag_In_Home",
-            "Sub_Close_Notice",
-            "Process_Login",
-            "StartApp"
-        ]
-    },
-
-    "Process_Login": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["TOUCH TO CONTINUE", "服务器选择"],
-        "next": ["Login", "Login_Server"]
+        "next": ["Flag_In_Home", "Sub_Close_Notice", "Login", "Login_Server"]
     },
 
     "Login": {
+        "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["TOUCH TO CONTINUE"]

@@ -13,8 +13,9 @@
         "expected": ["通关奖励"],
         "next": [
             "Simulation_Complete",
-            "SelectGainBuff",
-            "Check_In_Simulation_Case"
+            "Process_Gain_Buff",
+            "Check_In_Simulation_Case",
+            "Sub_Click_Empty"
         ]
     },
     "Pre_Start_The_Simulation": {
@@ -51,20 +52,35 @@
         "expected": ["开始模拟"]
     },
 
-    "SelectGainBuff": {
+    "Process_Gain_Buff": {
         "is_sub": true,
         "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": ["请选择增益效果"],
+        "expected": ["选择增益效果"],
         "next": ["Gain_Effect"]
     },
+
     "Gain_Effect": {
         "recognition": "OCR",
         "action": "Click",
         "expected": ["EPIC", "SSR", "SR", "R"],
+        "next": ["Unselected_Gain_Effect", "Sub_Affirm"]
+    },
+    "Unselected_Gain_Effect": {
+        "recognition": "OCR",
+        "expected": ["拥有的增益效果一览"],
+        "next": ["Click_Unselected_Affirm", "Click_Unselected", "Sub_Cancel"]
+    },
+    "Click_Unselected": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["不选择"],
+        "action": "Click"
+    },
+    "Click_Unselected_Affirm": {
+        "recognition": "OCR",
+        "expected": ["不选择增益效果，直接略过"],
         "next": ["Affirm"]
     },
-
     "Check_In_Simulation_Case": {
         "is_sub": true,
         "recognition": "OCR",
@@ -125,7 +141,7 @@
     "Simulation_Complete": {
         "recognition": "OCR",
         "expected": ["已通关该难度的最后一个地区"],
-        "next": ["After_Simulation_Complete", "Flag_In_Home", "Sub_Return"]
+        "next": ["After_Simulation_Complete", "Process_Return_Home"]
     },
 
     "After_Simulation_Complete": {

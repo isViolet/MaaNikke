@@ -33,12 +33,12 @@
         "action": "Click",
         "next": [
             "Process_Exit_Interception",
-            "NoBattle",
-            "Sub_Process_Quick_Battle"
+            "BattleOneTime",
+            "Sub_Process_Battle"
         ]
     },
 
-    "NoBattle": {
+    "BattleOneTime": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["每日至少游玩1次之后"],

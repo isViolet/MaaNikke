@@ -12,6 +12,8 @@
         ]
     },
     "NIKKE_Acceleration": {
+        "timeout": 5000,
+        "timeout_next": ["Process_Start_Accelerate_Game"],
         "recognition": "OCR",
         "expected": ["NIKKE"],
         "action": "Click",
@@ -40,10 +42,9 @@
     },
     "Close_Accelerate_Ad_Notice": {
         "is_sub": true,
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "threshold": 0.3,
-        "template": "../image/AcceleratorPop-up.png"
+        "recognition": "OCR",
+        "expected": ["立即抽奖"],
+        "action": "Click"
     },
     "Mobile_Game_Acceleration": {
         "is_sub": true,
