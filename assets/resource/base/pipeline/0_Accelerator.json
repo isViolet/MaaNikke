@@ -3,6 +3,8 @@
         "next": ["Check_In_Accelerator", "Check_Not_In_Accelerator"]
     },
     "Check_In_Accelerator": {
+        "timeout": 5000,
+        "timeout_next": ["Process_Start_Accelerate_Game"],
         "recognition": "OCR",
         "expected": ["手游加速"],
         "next": [

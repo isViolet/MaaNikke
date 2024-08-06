@@ -1,0 +1,84 @@
+{
+    "Process_Nikke_Consult": {
+        "timeout_next": ["Sub_Process_Return_Home", "Process_Nikke_Consult"],
+        "next": [
+            "Flag_In_Nikke_Consult_Gift",
+            "Enter_NIKKE_Consult",
+            "Enter_NIKKE_Page_Consult",
+            "Enter_NIKKE_Page"
+        ]
+    },
+
+    "Enter_NIKKE_Consult": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["追踪妮姬"],
+        "action": "Click",
+        "target": [49, 503, 86, 38]
+    },
+    "Enter_NIKKE_Page_Consult": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["咨询"],
+        "action": "Click"
+    },
+    "Enter_NIKKE_Page": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["妮姬"],
+        "action": "Click"
+    },
+
+    "Flag_In_Nikke_Consult_Gift": {
+        "recognition": "OCR",
+        "expected": ["送礼"],
+        "next": [
+            "NIKKE_Consulted_Complete",
+            "NIKKE_Consulted",
+            "NIKKE_Consult_Answer_B",
+            "Sub_Affirm",
+            "NIKKE_Quick_Consult",
+            "NIKKE_Consult",
+            "Sub_Click_Empty"
+        ]
+    },
+    "NIKKE_Consulted_Complete": {
+        "recognition": "OCR",
+        "expected": ["每日咨询次数已用完"],
+        "next": ["Process_Return_Home"]
+    },
+    "NIKKE_Consulted": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["已完成今日咨询"],
+        "action": "Swipe",
+        "end": [0, 50, 0, 0]
+    },
+    "NIKKE_Quick_Consult": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["快速咨询"],
+        "action": "Click"
+    },
+    "NIKKE_Consult": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["咨询"],
+        "action": "Click",
+        "index": 1
+    },
+    "NIKKE_Consult_Answer_A": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["LOG"],
+        "action": "Click",
+        "target": [266, 1160, 192, 36]
+    },
+    "NIKKE_Consult_Answer_B": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["LOG"],
+        "action": "Click",
+        "target": [295, 1265, 142, 30]
+    }
+}

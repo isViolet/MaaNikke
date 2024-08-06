@@ -1,9 +1,12 @@
 {
-    "StartUpAndLogin": {
-        "timeout": 20000,
-        "timeout_next": ["StartUpAndLogin"],
+    "StartApp": {
         "action": "StartApp",
         "package": "com.proximabeta.nikke/com.shiftup.nk.MainActivity",
+        "next": ["LoginApp"]
+    },
+
+    "LoginApp": {
+        "timeout_next": ["StartApp"],
         "next": ["Flag_In_Home", "Sub_Close_Notice", "Login", "Login_Server"]
     },
 
@@ -19,11 +22,5 @@
         "recognition": "OCR",
         "expected": ["服务器选择"],
         "next": ["Affirm"]
-    },
-
-    "StartApp": {
-        "is_sub": true,
-        "action": "StartApp",
-        "package": "com.proximabeta.nikke/com.shiftup.nk.MainActivity"
     }
 }

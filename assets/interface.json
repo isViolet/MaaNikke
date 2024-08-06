@@ -27,11 +27,15 @@
         },
         {
             "name": "唤醒NIKKE",
-            "entry": "StartUpAndLogin"
+            "entry": "StartApp"
         },
         {
             "name": "友情点",
             "entry": "Process_Get_Friendship_Point"
+        },
+        {
+            "name": "NIKKE咨询",
+            "entry": "Process_Nikke_Consult"
         },
         {
             "name": "基地奖励",

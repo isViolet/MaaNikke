@@ -1,0 +1,14 @@
+{
+    "Enter_ELYSION_TOWER": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["ELYSION TOWER"],
+        "next": ["Enter_Stage"]
+    },
+    "Enter_Stage": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["STAGE"],
+        "target_offset": [50, 0, 0, 0]
+    }
+}

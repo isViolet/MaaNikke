@@ -15,7 +15,7 @@
             "Simulation_Complete",
             "Process_Gain_Buff",
             "Check_In_Simulation_Case",
-            "Sub_Click_Empty"
+            "Sub_Process_Battle"
         ]
     },
     "Pre_Start_The_Simulation": {
@@ -63,7 +63,7 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": ["EPIC", "SSR", "SR", "R"],
-        "next": ["Unselected_Gain_Effect", "Sub_Affirm"]
+        "next": ["Unselected_Gain_Effect", "Sub_Affirm", "Click_Empty"]
     },
     "Unselected_Gain_Effect": {
         "recognition": "OCR",
@@ -81,14 +81,21 @@
         "expected": ["不选择增益效果，直接略过"],
         "next": ["Affirm"]
     },
+
     "Check_In_Simulation_Case": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["RESET TIME"],
-        "next": ["Pre_Automatic_Formation", "Sub_Click_Empty"]
+        "next": [
+            "After_Automatic_Formation",
+            "StrengthenAttributes",
+            "Pre_Automatic_Formation",
+            "Sub_Click_Empty"
+        ]
     },
 
     "Pre_Automatic_Formation": {
+        "is_sub": true,
         "recognition": "OCR",
         "expected": ["编队"],
         "action": "Click",
@@ -99,18 +106,19 @@
         "recognition": "OCR",
         "expected": ["自动编队"],
         "action": "Click",
-        "next": ["After_Automatic_Formation"]
+        "next": ["Save_Formation"]
+    },
+
+    "Save_Formation": {
+        "recognition": "OCR",
+        "expected": ["储存"],
+        "action": "Click"
     },
 
     "After_Automatic_Formation": {
         "recognition": "OCR",
-        "expected": ["储存"],
-        "action": "Click",
-        "next": [
-            "Check_In_Pre_Battle",
-            "SelectBattleNode",
-            "StrengthenAttributes"
-        ]
+        "expected": ["已储存"],
+        "next": ["Check_In_Pre_Battle", "SelectBattleNode"]
     },
 
     "Check_In_Pre_Battle": {
@@ -129,7 +137,7 @@
         "recognition": "OCR",
         "expected": ["属性提升"],
         "action": "Click",
-        "next": ["SelectStrengthenAttributes", "Process_Battle_Simulation_Room"]
+        "next": ["SelectStrengthenAttributes", "Click_Empty"]
     },
     "SelectStrengthenAttributes": {
         "is_sub": true,

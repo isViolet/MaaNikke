@@ -28,9 +28,6 @@
     },
 
     "Process_Battle_Interception": {
-        "recognition": "OCR",
-        "expected": ["快速战斗"],
-        "action": "Click",
         "next": [
             "Process_Exit_Interception",
             "BattleOneTime",
