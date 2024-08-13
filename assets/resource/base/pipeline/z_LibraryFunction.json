@@ -19,21 +19,37 @@
     },
 
     "Process_Battle": {
-        "next": ["In_Battle", "Finish_Battle", "Click_Battle", "Click_Empty"]
+        "next": [
+            "In_Auto_Battle_Or_Story",
+            "Finish_Battle",
+            "Click_Battle",
+            "Click_Empty"
+        ]
     },
     "Sub_Process_Battle": {
         "is_sub": true,
-        "next": ["In_Battle", "Finish_Battle", "Click_Battle", "Click_Empty"]
+        "next": [
+            "In_Auto_Battle_Or_Story",
+            "Finish_Battle",
+            "Click_Battle",
+            "Click_Empty"
+        ]
     },
     "Finish_Battle": {
         "recognition": "OCR",
         "action": "Click",
         "expected": ["点击任意处进行下一步"]
     },
-    "In_Battle": {
+    "In_Auto_Battle_Or_Story": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["AUTO"]
+        "expected": ["AUTO"],
+        "next": ["SKIP", "Click_Empty"]
+    },
+    "SKIP": {
+        "recognition": "OCR",
+        "expected": ["SKIP"],
+        "action": "Click"
     },
     "Click_Battle": {
         "recognition": "OCR",
@@ -85,12 +101,20 @@
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
-        "expected": ["点击领取奖励"]
+        "expected": ["点击领取奖励", "全部领取"]
     },
     "Sub_Close_Notice": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["公告", "一周内不再显示"],
+        "expected": ["系统公告", "一周内不再显示", "公告"],
         "next": ["Click_Empty"]
+    },
+    "ccc": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../image/close_ad.png",
+        "roi": [300, 1200, 100, 100],
+        "threshold": 0.6,
+        "action": "Click"
     }
 }

@@ -1,0 +1,59 @@
+{
+    "Process_StoryActivity": {
+        "next": [
+            "Process_Battle_StoryActivity",
+            "Enter_StoryActivity_Stage_List",
+            "Enter_StoryActivity"
+        ]
+    },
+    "Enter_StoryActivity_Stage_List": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["Enter"]
+    },
+    "Enter_StoryActivity": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["作战出击"],
+        "target_offset": [0, 50, 0, 0]
+    },
+
+    "Process_Battle_StoryActivity": {
+        "recognition": "OCR",
+        "expected": ["活动关卡"],
+        "next": [
+            "Process_Exit_StoryActivity",
+            "Battle_StoryActivity",
+            "Sub_Process_Battle"
+        ]
+    },
+
+    "Battle_StoryActivity": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": [
+            "1-12",
+            "1-11",
+            "1-10",
+            "1-9",
+            "1-8",
+            "1-7",
+            "1-6",
+            "1-5",
+            "1-4",
+            "1-3",
+            "1-2",
+            "1-1"
+        ],
+        "action": "Click",
+        "next": ["Process_Battle"]
+    },
+
+    "Process_Exit_StoryActivity": {
+        "recognition": "OCR",
+        "expected": ["0/5"],
+        "next": ["Process_Return_Home"]
+    }
+}

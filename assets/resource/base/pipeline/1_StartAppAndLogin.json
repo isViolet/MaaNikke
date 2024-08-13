@@ -20,7 +20,7 @@
     "Login_Server": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["服务器选择"],
+        "expected": ["请选择要进行游戏的服务器"],
         "next": ["Affirm"]
     }
 }

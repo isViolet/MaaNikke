@@ -28,6 +28,8 @@
     },
 
     "Process_Battle_Interception": {
+        "recognition": "OCR",
+        "expected": ["模拟战"],
         "next": [
             "Process_Exit_Interception",
             "BattleOneTime",

@@ -17,7 +17,7 @@
         "action": "Click",
         "expected": ["赠送"],
         "index": 1,
-        "next": ["Affirm_Friendship_Point", "Sub_Process_Return_Home"]
+        "next": ["Affirm_Friendship_Point", "Process_Return_Home"]
     },
     "Affirm_Friendship_Point": {
         "is_sub": true,

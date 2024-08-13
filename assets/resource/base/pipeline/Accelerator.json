@@ -1,0 +1,89 @@
+{
+    "Process_Start_Accelerate_Game": {
+        "next": [
+            "Accelerate_App",
+            "Sub_Start_Accelerating",
+            "Sub_Close_Accelerate_Ad_Notice",
+            "Sub_NIKKE_Acceleration",
+            "Sub_Mobile_Game_Acceleration",
+            "Sub_Start_Accelerator_App"
+        ]
+    },
+    "Accelerate_App": {
+        "recognition": "OCR",
+        "expected": ["点击启动游戏", "恢复并加速"],
+        "action": "Click"
+    },
+    "Sub_Start_Accelerating": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["开启加速"],
+        "action": "Click"
+    },
+    "Sub_Close_Accelerate_Ad_Notice": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../image/Accelerator/close_ad.png",
+        "roi": [300, 1200, 100, 100],
+        "threshold": 0.6,
+        "action": "Click"
+    },
+    "Sub_NIKKE_Acceleration": {
+        "is_sub": true,
+        "recognition": "FeatureMatch",
+        "template": "../image/Accelerator/NIKKE_APP_ITEM.png",
+        "action": "Click"
+    },
+    "Sub_Mobile_Game_Acceleration": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["手游加速"],
+        "action": "Click"
+    },
+
+    "Process_Stop_Accelerate_Game": {
+        "next": [
+            "Pause_Already",
+            "Pause_Accelerate",
+            "Sub_Pre_Pause_Accelerate",
+            "Sub_Close_Accelerate_Ad_Notice",
+            "Sub_Return_My_Accelerator",
+            "Sub_Start_Accelerator_App"
+        ]
+    },
+    "Pause_Already": {
+        "recognition": "OCR",
+        "expected": ["已暂停"]
+    },
+    "Pause_Accelerate": {
+        "recognition": "OCR",
+        "expected": ["暂停加速时长"],
+        "next": ["Click_OK"]
+    },
+    "Click_OK": {
+        "recognition": "FeatureMatch",
+        "template": "../image/Accelerator/OK.png",
+        "action": "Click",
+        "roi": [300, 800, 300, 200]
+    },
+    "Sub_Pre_Pause_Accelerate": {
+        "is_sub": true,
+        "recognition": "FeatureMatch",
+        "template": "../image/Accelerator/Stop_Time.png",
+        "action": "Click"
+    },
+
+    "Sub_Return_My_Accelerator": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "我的",
+        "roi": [500, 1400, 200, 200],
+        "action": "Click"
+    },
+
+    "Sub_Start_Accelerator_App": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.nn.accelerator.box/com.nn.accelerator.box.activity.MainActivity"
+    }
+}

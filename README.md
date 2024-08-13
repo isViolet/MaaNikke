@@ -21,6 +21,12 @@
 
 ## update log
 
+### 2024/8/13
+
+1. 由纯文字识别改进为图文组合识别
+2. fix bug
+3. 优化加速器的启动与关闭
+
 ### 2024/8/6
 
 1. 新增 NIKKE 咨询
@@ -66,6 +72,8 @@ git tag v1.0.0
 git push origin v1.0.0
 
 python -m MaaDebugger
+
+python -m pip install MaaDebugger MaaFW --upgrade
 
 #获取当前app包名
 adb shell "dumpsys window w |grep \/ |grep name="
