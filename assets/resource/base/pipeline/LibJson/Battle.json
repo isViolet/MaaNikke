@@ -1,0 +1,71 @@
+{
+    "Process_Battle": {
+        "recognition": "OCR",
+        "expected": [
+            "点击任意处进行下一步",
+            "快速战斗",
+            "进入战斗",
+            "AUTO",
+            "SKIP"
+        ],
+        "next": [
+            "In_Story",
+            "In_Auto_Battle",
+            "Finish_Battle",
+            "Click_Battle",
+            "Click_Empty"
+        ]
+    },
+    "Sub_Process_Battle": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": [
+            "点击任意处进行下一步",
+            "快速战斗",
+            "进入战斗",
+            "AUTO",
+            "SKIP"
+        ],
+        "next": [
+            "In_Story",
+            "In_Auto_Battle",
+            "Finish_Battle",
+            "Click_Battle",
+            "Click_Empty"
+        ]
+    },
+    "In_Auto_Battle": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["AUTO"]
+    },
+    "In_Story": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["SKIP"],
+        "action": "Click",
+        "roi": [300, 66, 431, 35]
+    },
+    "Finish_Battle": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["点击任意处进行下一步"]
+    },
+
+    "Click_Battle": {
+        "recognition": "OCR",
+        "expected": ["快速战斗"],
+        "action": "Click",
+        "next": ["To_Battle", "Battle", "Click_Empty"]
+    },
+    "Battle": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["进入战斗"]
+    },
+    "To_Battle": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["进行战斗"]
+    }
+}

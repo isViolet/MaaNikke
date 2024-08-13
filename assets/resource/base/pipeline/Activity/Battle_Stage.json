@@ -1,0 +1,88 @@
+{
+    "Sub_Process_Battle_Stage": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["EVENT"],
+        "next": [
+            "Battle_Stage_1-12",
+            "Battle_Stage_1-11",
+            "Battle_Stage_1-10",
+            "Battle_Stage_1-9",
+            "Battle_Stage_1-8",
+            "Battle_Stage_1-7",
+            "Battle_Stage_1-6",
+            "Battle_Stage_1-5",
+            "Battle_Stage_1-4",
+            "Battle_Stage_1-3",
+            "Battle_Stage_1-2",
+            "Battle_Stage_1-1",
+            "Click_Empty"
+        ]
+    },
+    "Battle_Stage_1-1": {
+        "recognition": "OCR",
+        "expected": ["1-1"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-2": {
+        "recognition": "OCR",
+        "expected": ["1-2"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-3": {
+        "recognition": "OCR",
+        "expected": ["1-3"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-4": {
+        "recognition": "OCR",
+        "expected": ["1-4"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-5": {
+        "recognition": "OCR",
+        "expected": ["1-5"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-6": {
+        "recognition": "OCR",
+        "expected": ["1-6"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-7": {
+        "recognition": "OCR",
+        "expected": ["1-7"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-8": {
+        "recognition": "OCR",
+        "expected": ["1-8"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-9": {
+        "recognition": "OCR",
+        "expected": ["1-9"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-10": {
+        "recognition": "OCR",
+        "expected": ["1-10"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-11": {
+        "recognition": "OCR",
+        "expected": ["1-11"],
+        "action": "Click"
+    },
+    "Battle_Stage_1-12": {
+        "recognition": "OCR",
+        "expected": ["1-12"],
+        "action": "Click",
+        "next": ["Unable_To_Repeat_Battle", "Click_Empty"]
+    },
+    "Unable_To_Repeat_Battle": {
+        "recognition": "OCR",
+        "expected": ["该关卡无法重复通关"],
+        "next": ["Battle_Stage_1-11"]
+    }
+}

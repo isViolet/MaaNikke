@@ -30,21 +30,10 @@
     "Process_Battle_Interception": {
         "recognition": "OCR",
         "expected": ["模拟战"],
-        "next": [
-            "Process_Exit_Interception",
-            "BattleOneTime",
-            "Sub_Process_Battle"
-        ]
+        "next": ["Process_Quit_Interception", "Sub_Process_Battle"]
     },
 
-    "BattleOneTime": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["每日至少游玩1次之后"],
-        "next": ["Process_Battle"]
-    },
-
-    "Process_Exit_Interception": {
+    "Process_Quit_Interception": {
         "recognition": "OCR",
         "expected": ["已超出进入次数"],
         "next": ["Process_Return_Home"]

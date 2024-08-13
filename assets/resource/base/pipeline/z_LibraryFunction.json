@@ -18,51 +18,6 @@
         "expected": ["大厅"]
     },
 
-    "Process_Battle": {
-        "next": [
-            "In_Auto_Battle_Or_Story",
-            "Finish_Battle",
-            "Click_Battle",
-            "Click_Empty"
-        ]
-    },
-    "Sub_Process_Battle": {
-        "is_sub": true,
-        "next": [
-            "In_Auto_Battle_Or_Story",
-            "Finish_Battle",
-            "Click_Battle",
-            "Click_Empty"
-        ]
-    },
-    "Finish_Battle": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["点击任意处进行下一步"]
-    },
-    "In_Auto_Battle_Or_Story": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["AUTO"],
-        "next": ["SKIP", "Click_Empty"]
-    },
-    "SKIP": {
-        "recognition": "OCR",
-        "expected": ["SKIP"],
-        "action": "Click"
-    },
-    "Click_Battle": {
-        "recognition": "OCR",
-        "expected": ["快速战斗", "进入战斗"],
-        "action": "Click",
-        "next": ["Battle", "Click_Empty"]
-    },
-    "Battle": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["进入战斗"]
-    },
-
     "Click_Empty": {
         "action": "Click",
         "target": [10, 10, 10, 10]
