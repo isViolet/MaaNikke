@@ -1,6 +1,6 @@
 {
     "Process_Interception": {
-        "timeout_next": ["Sub_Process_Return_Home", "Process_Interception"],
+        "timeout_next": ["Process_Return_Home"],
         "next": [
             "Process_Battle_Interception",
             "Enter_Special_Interception",
@@ -8,18 +8,21 @@
             "Enter_Ark"
         ]
     },
+
     "Enter_Special_Interception": {
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["目标拦截战"]
     },
+
     "Enter_Interceptions": {
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["拦截战"]
     },
+
     "Enter_Ark": {
         "is_sub": true,
         "recognition": "OCR",
@@ -30,12 +33,15 @@
     "Process_Battle_Interception": {
         "recognition": "OCR",
         "expected": ["模拟战"],
-        "next": ["Process_Quit_Interception", "Sub_Process_Battle"]
+        "next": [
+            "Process_Quit_Interception",
+            "Sub_Loading",
+            "Sub_Process_Battle"
+        ]
     },
 
     "Process_Quit_Interception": {
         "recognition": "OCR",
-        "expected": ["已超出进入次数"],
-        "next": ["Process_Return_Home"]
+        "expected": ["已超出进入次数"]
     }
 }

@@ -1,28 +1,23 @@
 {
-    "Process_Get_Friendship_Point": {
+    "Process_Friendship_Point": {
         "next": [
-            "Give_Friendship_Point",
+            "Get_Friendship_Point",
             "Enter_Friends",
             "Sub_Process_Return_Home"
         ]
     },
+
+    "Get_Friendship_Point": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["赠送"],
+        "index": 1
+    },
+
     "Enter_Friends": {
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["好友"]
-    },
-    "Give_Friendship_Point": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["赠送"],
-        "index": 1,
-        "next": ["Affirm_Friendship_Point", "Process_Return_Home"]
-    },
-    "Affirm_Friendship_Point": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["确认"]
     }
 }

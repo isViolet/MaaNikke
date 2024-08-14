@@ -1,8 +1,11 @@
 {
     "Process_Outpost": {
-        "timeout": 20000,
-        "timeout_next": ["Sub_Process_Return_Home", "Process_Outpost"],
-        "next": ["Flag_In_Outpost", "Enter_Outpost"]
+        "next": [
+            "Flag_In_Outpost",
+            "Sub_Loading",
+            "Enter_Outpost",
+            "Sub_Process_Return_Home"
+        ]
     },
 
     "Flag_In_Outpost": {

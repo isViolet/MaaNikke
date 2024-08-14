@@ -3,6 +3,7 @@
         "next": [
             "Accelerate_App",
             "Sub_Start_Accelerating",
+            "Sub_Switch_Server",
             "Sub_Close_Accelerate_Ad_Notice",
             "Sub_NIKKE_Acceleration",
             "Sub_Mobile_Game_Acceleration",
@@ -19,6 +20,18 @@
         "recognition": "OCR",
         "expected": ["开启加速"],
         "action": "Click"
+    },
+    "Sub_Switch_Server": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["手动切换区服"],
+        "next": ["Switch_Server_JP"]
+    },
+    "Switch_Server_JP": {
+        "recognition": "OCR",
+        "expected": ["日服", "日本"],
+        "action": "Click",
+        "next": ["Affirm", "Click_Empty"]
     },
     "Sub_Close_Accelerate_Ad_Notice": {
         "is_sub": true,

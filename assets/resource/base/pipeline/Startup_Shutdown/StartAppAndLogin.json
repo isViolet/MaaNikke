@@ -1,0 +1,36 @@
+{
+    "StartUp": {
+        "next": [
+            "Login_Game",
+            "Sub_StartUp_Loading",
+            "Sub_Login_Server",
+            "Sub_Close_Notice",
+            "Sub_Start_NIKKE"
+        ]
+    },
+
+    "Login_Game": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["TOUCH TO CONTINUE"]
+    },
+
+    "Sub_StartUp_Loading": {
+        "is_sub": true,
+        "recognition": "FeatureMatch",
+        "template": ["../image/startUp/startLoadingLogo.jpg"]
+    },
+
+    "Sub_Login_Server": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["请选择要进行游戏的服务器"],
+        "next": ["Switch_Server_JP"]
+    },
+
+    "Sub_Start_NIKKE": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.proximabeta.nikke/com.shiftup.nk.MainActivity"
+    }
+}

@@ -27,11 +27,11 @@
         },
         {
             "name": "唤醒NIKKE",
-            "entry": "StartApp"
+            "entry": "StartUp"
         },
         {
             "name": "友情点",
-            "entry": "Process_Get_Friendship_Point"
+            "entry": "Process_Friendship_Point"
         },
         {
             "name": "NIKKE咨询",
