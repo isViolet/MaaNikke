@@ -1,0 +1,34 @@
+{
+    "Sub_Simulation_Buff": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["选择增益效果"],
+        "next": ["Gain_Effect"]
+    },
+
+    "Gain_Effect": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["EPIC", "SSR", "SR", "R"],
+        "next": ["Unselected_Gain_Effect", "Sub_Affirm", "Click_Empty"]
+    },
+
+    "Unselected_Gain_Effect": {
+        "recognition": "OCR",
+        "expected": ["拥有的增益效果一览"],
+        "next": ["Click_Unselected_Affirm", "Click_Unselected", "Sub_Cancel"]
+    },
+
+    "Click_Unselected_Affirm": {
+        "recognition": "OCR",
+        "expected": ["不选择增益效果，直接略过"],
+        "next": ["Affirm"]
+    },
+
+    "Click_Unselected": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["不选择"],
+        "action": "Click"
+    }
+}

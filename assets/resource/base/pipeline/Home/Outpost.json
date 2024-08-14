@@ -1,35 +1,35 @@
 {
     "Process_Outpost": {
         "next": [
-            "Flag_In_Outpost",
+            "Enter_Dispatch",
             "Sub_Loading",
             "Enter_Outpost",
             "Sub_Process_Return_Home"
         ]
     },
 
-    "Flag_In_Outpost": {
-        "recognition": "OCR",
-        "expected": ["基础核心"],
-        "next": ["Process_Outpost_Dispatch"]
-    },
-
-    "Enter_Outpost": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["前哨基地"],
-        "action": "Click"
-    },
-
-    "Process_Outpost_Dispatch": {
-        "recognition": "OCR",
+    "Enter_Dispatch": {
+        "recognition": "FeatureMatch",
+        "template": "../image/logo_enter_dispatch.png",
         "action": "Click",
-        "target_offset": [0, -20, 0, 0],
-        "expected": ["派遣"],
-        "next": ["Process_Do_Outpost_Dispatch", "Gain_All_Reward", "Sub_Reward"]
+        "roi": [300, 1400, 200, 200],
+        "next": ["No_Dispatch", "Sub_Reward"]
     },
 
-    "Process_Outpost_Reward": {
+    "No_Dispatch": {
+        "recognition": "OCR",
+        "expected": ["没有已完成的派遣"],
+        "next": ["All_Dispatch"]
+    },
+
+    "All_Dispatch": {
+        "recognition": "OCR",
+        "expected": ["全部派遣"],
+        "action": "Click",
+        "next": ["Dispatch_Finished", "Dispatch"]
+    },
+
+    "Dispatch_Finished": {
         "recognition": "OCR",
         "expected": ["目前没有可进行的派遣任务"],
         "next": [
@@ -40,17 +40,6 @@
         ]
     },
 
-    "Process_Do_Outpost_Dispatch": {
-        "recognition": "OCR",
-        "expected": ["没有已完成的派遣"],
-        "next": ["All_Dispatch"]
-    },
-    "All_Dispatch": {
-        "recognition": "OCR",
-        "expected": ["全部派遣"],
-        "action": "Click",
-        "next": ["Process_Outpost_Reward", "Dispatch"]
-    },
     "Dispatch": {
         "recognition": "OCR",
         "expected": ["派遣"],
@@ -59,10 +48,10 @@
         "next": ["All_Dispatch"]
     },
 
-    "Gain_All_Reward": {
+    "Enter_Outpost": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["全部领取"],
+        "expected": ["前哨基地"],
         "action": "Click"
     },
 
@@ -75,8 +64,7 @@
     "Obtain_Outpost": {
         "recognition": "OCR",
         "action": "Click",
-        "expected": ["获得奖励"],
-        "next": ["Process_Return_Home"]
+        "expected": ["获得奖励"]
     },
     "Pre_Outpost_Sweep": {
         "is_sub": true,
@@ -86,20 +74,9 @@
     },
     "Enter_Outpost_Reward": {
         "is_sub": true,
-        "recognition": "OCR",
+        "recognition": "FeatureMatch",
+        "template": "../image/outpost_diary.png",
         "action": "Click",
-        "expected": [
-            "0%",
-            "1%",
-            "2%",
-            "3%",
-            "4%",
-            "5%",
-            "6%",
-            "7%",
-            "8%",
-            "9%",
-            "LV"
-        ]
+        "roi": [300, 1400, 200, 200]
     }
 }

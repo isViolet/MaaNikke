@@ -2,7 +2,8 @@
     "Sub_Process_Battle_Stage": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["EVENT"],
+        "expected": ["Hard", "Normal"],
+        "action": "Click",
         "next": [
             "Battle_Stage_1-12",
             "Battle_Stage_1-11",

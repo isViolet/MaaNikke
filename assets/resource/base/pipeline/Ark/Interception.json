@@ -1,29 +1,30 @@
 {
     "Process_Interception": {
-        "timeout_next": ["Process_Return_Home"],
         "next": [
             "Process_Battle_Interception",
-            "Enter_Special_Interception",
-            "Enter_Interceptions",
-            "Enter_Ark"
+            "Sub_Loading",
+            "Sub_Enter_Special_Interception",
+            "Sub_Enter_Interceptions",
+            "Sub_Enter_Ark",
+            "Sub_Process_Return_Home"
         ]
     },
 
-    "Enter_Special_Interception": {
+    "Sub_Enter_Special_Interception": {
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["目标拦截战"]
     },
 
-    "Enter_Interceptions": {
+    "Sub_Enter_Interceptions": {
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["拦截战"]
     },
 
-    "Enter_Ark": {
+    "Sub_Enter_Ark": {
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
