@@ -38,9 +38,10 @@
 
     "Sub_Return": {
         "is_sub": true,
-        "recognition": "OCR",
+        "recognition": "FeatureMatch",
+        "template": "../image/return_home.png",
         "action": "Click",
-        "expected": ["返回"]
+        "roi": [100, 1500, 150, 80]
     },
 
     "Sub_Close_Notice": {
@@ -89,6 +90,6 @@
     "Sub_Loading": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["LOADING"]
+        "expected": ["LOADING", "TETRA", "MISSILIS", "PILGRIM", "ELYSION"]
     }
 }

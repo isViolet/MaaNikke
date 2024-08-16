@@ -2,25 +2,11 @@
     "Process_StoryActivity": {
         "next": [
             "Process_Battle_StoryActivity",
-            "Enter_StoryActivity_Stage_List",
+            "After_Enter_StoryActivity",
             "Enter_StoryActivity",
             "Sub_Process_Return_Home"
         ]
     },
-    "Enter_StoryActivity_Stage_List": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["Enter"]
-    },
-    "Enter_StoryActivity": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["作战出击"],
-        "target_offset": [0, 50, 0, 0]
-    },
-
     "Process_Battle_StoryActivity": {
         "recognition": "OCR",
         "expected": ["活动关卡"],
@@ -30,10 +16,26 @@
             "Sub_Process_Battle_Stage"
         ]
     },
-
     "Process_Quit_StoryActivity": {
         "recognition": "OCR",
         "expected": ["0/5"],
         "next": ["Process_Return_Home"]
+    },
+    "After_Enter_StoryActivity": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["剧情活动"],
+        "next": ["Enter_StoryActivity_Stage_List", "Click_Empty"]
+    },
+    "Enter_StoryActivity_Stage_List": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["Enter"]
+    },
+    "Enter_StoryActivity": {
+        "is_sub": true,
+        "recognition": "FeatureMatch",
+        "template": "../image/Activity/activity_entry.png",
+        "action": "Click"
     }
 }

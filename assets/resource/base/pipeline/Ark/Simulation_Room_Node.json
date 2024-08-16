@@ -1,0 +1,66 @@
+{
+    "Sub_Pre_Simulation_Node": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["RESET TIME"],
+        "next": [
+            "After_Automatic_Formation",
+            "StrengthenAttributes",
+            "Pre_Automatic_Formation",
+            "Sub_Click_Empty"
+        ]
+    },
+
+    "Pre_Automatic_Formation": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["编队"],
+        "action": "Click",
+        "next": ["Automatic_Formation"]
+    },
+
+    "Automatic_Formation": {
+        "recognition": "OCR",
+        "expected": ["自动编队"],
+        "action": "Click",
+        "next": ["Save_Formation"]
+    },
+
+    "Save_Formation": {
+        "recognition": "OCR",
+        "expected": ["储存"],
+        "action": "Click"
+    },
+
+    "After_Automatic_Formation": {
+        "recognition": "OCR",
+        "expected": ["已储存"],
+        "next": ["Check_In_Pre_Battle", "SelectBattleNode"]
+    },
+
+    "Check_In_Pre_Battle": {
+        "recognition": "OCR",
+        "expected": ["歼灭战"],
+        "next": ["Process_Battle"]
+    },
+
+    "SelectBattleNode": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["HARD", "NORMAL", "获得"]
+    },
+    "StrengthenAttributes": {
+        "recognition": "OCR",
+        "expected": ["属性提升"],
+        "action": "Click",
+        "next": ["SelectStrengthenAttributes", "Click_Empty"]
+    },
+    "SelectStrengthenAttributes": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["第一个选项"],
+        "action": "Click",
+        "next": ["Affirm"]
+    }
+}
