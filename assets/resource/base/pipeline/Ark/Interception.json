@@ -19,9 +19,9 @@
 
     "Sub_Enter_Interceptions": {
         "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["拦截战"]
+        "recognition": "FeatureMatch",
+        "template": "../image/Entry_Interception.png",
+        "action": "Click"
     },
 
     "Sub_Enter_Ark": {

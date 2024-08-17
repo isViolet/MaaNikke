@@ -12,9 +12,9 @@
 
     "Sub_Enter_Simulation_Room": {
         "is_sub": true,
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": ["模拟室"]
+        "recognition": "FeatureMatch",
+        "template": "../image/Entry_Simulation_Room.png",
+        "action": "Click"
     },
 
     "Process_Battle_Simulation_Room": {
