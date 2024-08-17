@@ -1,7 +1,9 @@
 {
     "StartUp": {
         "next": [
-            "Login_Game",
+            "Flag_In_Homepage",
+            "Sub_Return_Homepage",
+            "Sub_Login_Game",
             "Sub_StartUp_Loading",
             "Sub_Login_Server",
             "Sub_Close_Notice",
@@ -9,7 +11,8 @@
         ]
     },
 
-    "Login_Game": {
+    "Sub_Login_Game": {
+        "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
         "expected": ["TOUCH TO CONTINUE"]
