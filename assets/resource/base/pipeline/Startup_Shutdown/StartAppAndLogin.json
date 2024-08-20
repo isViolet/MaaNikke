@@ -1,16 +1,7 @@
 {
     "StartUpGame": {
         "next": [
-            "Flag_In_Homepage",
             "Sub_Loading",
-            "Sub_Simulation_Room_Loading",
-            "Sub_Reward",
-            "Sub_Loading_StartUp",
-            "Sub_Affirm",
-            "Sub_Reward",
-            "Sub_Return_Homepage",
-            "Sub_Return",
-            "Sub_Affirm",
             "Sub_Login_Game",
             "Sub_Close_Notice",
             "Flag_In_Homepage",

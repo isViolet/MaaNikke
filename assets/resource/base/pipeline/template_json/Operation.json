@@ -29,7 +29,8 @@
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
-        "expected": ["点击领取奖励", "全部领取"]
+        "expected": ["点击领取奖励", "全部领取"],
+        "next": ["Click_Empty"]
     },
 
     "Affirm": {
@@ -64,12 +65,21 @@
     "Sub_Loading": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["LOADING", "TETRA", "MISSILIS", "PILGRIM", "ELYSION"]
+        "expected": ["LOADING"]
+    },
+    "Sub_Ark_Loading": {
+        "is_sub": true,
+        "recognition": "FeatureMatch",
+        "template": [
+            "../image/template/loading_elysion.png",
+            "../image/template/loading_PILGRIM.png",
+            "../image/template/loading_MISSILIS.png",
+            "../image/template/loading_TETRA.png"
+        ]
     },
     "Sub_Simulation_Room_Loading": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Ark/Simulation_Room_Loading.png",
-        "action": "Click"
+        "template": "../image/Ark/Simulation_Room_Loading.png"
     }
 }

@@ -29,6 +29,6 @@
         "recognition": "FeatureMatch",
         "template": "../image/Home/outpost_diary.png",
         "action": "Click",
-        "roi": [300, 1400, 200, 200]
+        "roi": [0, 1300, 200, 200]
     }
 }

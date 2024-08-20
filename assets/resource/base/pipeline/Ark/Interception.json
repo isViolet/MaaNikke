@@ -1,12 +1,11 @@
 {
     "Process_Interception": {
         "next": [
-            "Sub_Loading",
             "Process_Interception_Battle",
             "Sub_Enter_Special_Interception",
             "Sub_Enter_Interceptions",
             "Sub_Enter_Ark",
-            "Sub_StartUpGame"
+            "Interception_StartUpGame"
         ]
     },
 
@@ -30,9 +29,10 @@
 
     "Sub_Enter_Interceptions": {
         "is_sub": true,
-        "recognition": "FeatureMatch",
-        "template": "../image/Ark/Entry_Interception.png",
-        "action": "Click"
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": ["拦截战"],
+        "roi": [0, 1000, 500, 500]
     },
 
     "Sub_Enter_Ark": {
@@ -40,5 +40,13 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": ["方舟"]
+    },
+
+    "Interception_StartUpGame": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["返回"],
+        "times_limit": 3,
+        "runout_next": ["StartUpGame"]
     }
 }
