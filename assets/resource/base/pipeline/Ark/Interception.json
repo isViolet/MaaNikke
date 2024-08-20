@@ -20,7 +20,7 @@
     "Sub_Enter_Interceptions": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Entry_Interception.png",
+        "template": "../image/Ark/Entry_Interception.png",
         "action": "Click"
     },
 

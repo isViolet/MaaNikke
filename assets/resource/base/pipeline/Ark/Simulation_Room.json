@@ -3,6 +3,7 @@
         "next": [
             "Process_Battle_Simulation_Room",
             "Sub_Loading",
+            "Sub_Simulation_Room_Loading",
             "Pre_Start_The_Simulation",
             "Sub_Enter_Simulation_Room",
             "Sub_Enter_Ark",
@@ -13,7 +14,7 @@
     "Sub_Enter_Simulation_Room": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Entry_Simulation_Room.png",
+        "template": "../image/Ark/Entry_Simulation_Room.png",
         "action": "Click"
     },
 
@@ -23,6 +24,8 @@
         "next": [
             "Simulation_Complete",
             "Sub_Loading",
+            "Sub_Simulation_Room_Loading",
+            "StrengthenAttributes",
             "Sub_Simulation_Buff",
             "Sub_Pre_Simulation_Node",
             "Sub_Process_Battle"

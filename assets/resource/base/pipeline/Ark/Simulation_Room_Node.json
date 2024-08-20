@@ -5,7 +5,6 @@
         "expected": ["RESET TIME"],
         "next": [
             "After_Automatic_Formation",
-            "StrengthenAttributes",
             "Pre_Automatic_Formation",
             "Sub_Click_Empty"
         ]
@@ -51,8 +50,9 @@
         "expected": ["HARD", "NORMAL", "获得"]
     },
     "StrengthenAttributes": {
+        "is_sub": true,
         "recognition": "OCR",
-        "expected": ["属性提升"],
+        "expected": ["属性提升", "改变的机会"],
         "action": "Click",
         "next": ["SelectStrengthenAttributes", "Click_Empty"]
     },

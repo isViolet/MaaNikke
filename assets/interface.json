@@ -50,6 +50,10 @@
             "entry": "Process_Simulation_Room"
         },
         {
+            "name": "活动关卡",
+            "entry": "Process_StoryActivity"
+        },
+        {
             "name": "关闭加速器",
             "entry": "Process_Stop_Accelerate_Game"
         }

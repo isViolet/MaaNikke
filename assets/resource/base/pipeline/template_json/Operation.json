@@ -38,10 +38,9 @@
 
     "Sub_Return": {
         "is_sub": true,
-        "recognition": "FeatureMatch",
-        "template": "../image/return_home.png",
+        "recognition": "OCR",
         "action": "Click",
-        "roi": [100, 1500, 150, 80]
+        "expected": ["返回"]
     },
 
     "Sub_Close_Notice": {
@@ -91,5 +90,11 @@
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["LOADING", "TETRA", "MISSILIS", "PILGRIM", "ELYSION"]
+    },
+    "Sub_Simulation_Room_Loading": {
+        "is_sub": true,
+        "recognition": "FeatureMatch",
+        "template": "../image/Ark/Simulation_Room_Loading.png",
+        "action": "Click"
     }
 }
