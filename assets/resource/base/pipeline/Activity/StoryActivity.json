@@ -4,7 +4,7 @@
             "Process_Battle_StoryActivity",
             "After_Enter_StoryActivity",
             "Enter_StoryActivity",
-            "Sub_Process_Return_Home"
+            "Sub_StartUpGame"
         ]
     },
     "Process_Battle_StoryActivity": {
@@ -18,8 +18,7 @@
     },
     "Process_Quit_StoryActivity": {
         "recognition": "OCR",
-        "expected": ["0/5"],
-        "next": ["Process_Return_Home"]
+        "expected": ["0/5"]
     },
     "After_Enter_StoryActivity": {
         "is_sub": true,

@@ -1,10 +1,6 @@
 {
     "Process_Friendship_Point": {
-        "next": [
-            "Get_Friendship_Point",
-            "Enter_Friends",
-            "Sub_Process_Return_Home"
-        ]
+        "next": ["Get_Friendship_Point", "Enter_Friends", "Sub_StartUpGame"]
     },
 
     "Get_Friendship_Point": {

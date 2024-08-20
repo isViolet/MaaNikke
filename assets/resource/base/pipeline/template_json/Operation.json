@@ -1,29 +1,4 @@
 {
-    "Process_Return_Home": {
-        "next": [
-            "Flag_In_Homepage",
-            "Sub_Loading",
-            "Sub_Close_Notice",
-            "Sub_Reward",
-            "Sub_Return_Homepage",
-            "Sub_Return",
-            "Sub_Affirm"
-        ]
-    },
-
-    "Sub_Process_Return_Home": {
-        "is_sub": true,
-        "next": [
-            "Flag_In_Homepage",
-            "Sub_Loading",
-            "Sub_Close_Notice",
-            "Sub_Reward",
-            "Sub_Return_Homepage",
-            "Sub_Return",
-            "Sub_Affirm"
-        ]
-    },
-
     "Flag_In_Homepage": {
         "recognition": "OCR",
         "expected": ["作战出击"]
