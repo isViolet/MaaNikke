@@ -9,7 +9,7 @@
             "SKIP"
         ],
         "next": [
-            "In_Story",
+            "Skip_Story",
             "In_Auto_Battle",
             "Finish_Battle",
             "Click_Battle",
@@ -28,7 +28,7 @@
             "SKIP"
         ],
         "next": [
-            "In_Story",
+            "Skip_Story",
             "In_Auto_Battle",
             "Finish_Battle",
             "Click_Battle",
@@ -41,7 +41,7 @@
         "recognition": "OCR",
         "expected": ["AUTO"]
     },
-    "In_Story": {
+    "Skip_Story": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": ["SKIP"],

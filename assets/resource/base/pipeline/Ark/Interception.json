@@ -1,13 +1,24 @@
 {
     "Process_Interception": {
         "next": [
-            "Process_Battle_Interception",
             "Sub_Loading",
+            "Process_Interception_Battle",
             "Sub_Enter_Special_Interception",
             "Sub_Enter_Interceptions",
             "Sub_Enter_Ark",
-            "Sub_Process_Return_Home"
+            "Sub_StartUpGame"
         ]
+    },
+
+    "Process_Interception_Battle": {
+        "recognition": "OCR",
+        "expected": ["模拟战"],
+        "next": ["Sub_Loading", "Interception_Finished", "Sub_Process_Battle"]
+    },
+
+    "Interception_Finished": {
+        "recognition": "OCR",
+        "expected": ["已超出进入次数"]
     },
 
     "Sub_Enter_Special_Interception": {
@@ -20,7 +31,7 @@
     "Sub_Enter_Interceptions": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Entry_Interception.png",
+        "template": "../image/Ark/Entry_Interception.png",
         "action": "Click"
     },
 
@@ -29,20 +40,5 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": ["方舟"]
-    },
-
-    "Process_Battle_Interception": {
-        "recognition": "OCR",
-        "expected": ["模拟战"],
-        "next": [
-            "Process_Quit_Interception",
-            "Sub_Loading",
-            "Sub_Process_Battle"
-        ]
-    },
-
-    "Process_Quit_Interception": {
-        "recognition": "OCR",
-        "expected": ["已超出进入次数"]
     }
 }

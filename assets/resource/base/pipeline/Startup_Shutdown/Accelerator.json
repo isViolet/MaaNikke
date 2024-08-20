@@ -36,7 +36,7 @@
     "Sub_Close_Accelerate_Ad_Notice": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "../image/Accelerator/close_ad.png",
+        "template": "../image/Startup_Shutdown/close_ad.png",
         "roi": [300, 1200, 100, 100],
         "threshold": 0.6,
         "action": "Click"
@@ -44,7 +44,7 @@
     "Sub_NIKKE_Acceleration": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Accelerator/NIKKE_APP_ITEM.png",
+        "template": "../image/Startup_Shutdown/NIKKE_APP_ITEM.png",
         "action": "Click"
     },
     "Sub_Mobile_Game_Acceleration": {
@@ -75,14 +75,14 @@
     },
     "Click_OK": {
         "recognition": "FeatureMatch",
-        "template": "../image/Accelerator/OK.png",
+        "template": "../image/Startup_Shutdown/OK.png",
         "action": "Click",
         "roi": [300, 800, 300, 200]
     },
     "Sub_Pre_Pause_Accelerate": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Accelerator/Stop_Time.png",
+        "template": "../image/Startup_Shutdown/Stop_Time.png",
         "action": "Click"
     },
 

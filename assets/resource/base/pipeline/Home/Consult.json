@@ -5,7 +5,7 @@
             "Sub_Enter_NIKKE_Consult",
             "Sub_Enter_NIKKE_Consult_List",
             "Sub_Show_All_NIKKE",
-            "Sub_Process_Return_Home"
+            "Sub_StartUpGame"
         ]
     },
 
@@ -36,6 +36,14 @@
         "end": [0, 50, 0, 0]
     },
 
+    "Sub_NIKKE_Consult_Answer_B": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["LOG"],
+        "action": "Click",
+        "target": [295, 1265, 142, 30]
+    },
+
     "Sub_NIKKE_Quick_Consult": {
         "is_sub": true,
         "recognition": "OCR",
@@ -57,14 +65,6 @@
         "expected": ["LOG"],
         "action": "Click",
         "target": [266, 1160, 192, 36]
-    },
-
-    "Sub_NIKKE_Consult_Answer_B": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["LOG"],
-        "action": "Click",
-        "target": [295, 1265, 142, 30]
     },
 
     "Sub_Enter_NIKKE_Consult": {

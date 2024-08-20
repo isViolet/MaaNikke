@@ -22,12 +22,12 @@
     ],
     "task": [
         {
-            "name": "启动加速器",
+            "name": "启动雷神加速器",
             "entry": "Process_Start_Accelerate_Game"
         },
         {
             "name": "唤醒NIKKE",
-            "entry": "StartUp"
+            "entry": "StartUpGame"
         },
         {
             "name": "友情点",
@@ -42,12 +42,20 @@
             "entry": "Process_Outpost"
         },
         {
+            "name": "派遣",
+            "entry": "Process_Dispatch"
+        },
+        {
             "name": "拦截战",
             "entry": "Process_Interception"
         },
         {
             "name": "模拟室",
             "entry": "Process_Simulation_Room"
+        },
+        {
+            "name": "活动",
+            "entry": "Process_StoryActivity"
         },
         {
             "name": "关闭加速器",

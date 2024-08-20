@@ -6,14 +6,14 @@
             "Pre_Start_The_Simulation",
             "Sub_Enter_Simulation_Room",
             "Sub_Enter_Ark",
-            "Sub_Process_Return_Home"
+            "Sub_StartUpGame"
         ]
     },
 
     "Sub_Enter_Simulation_Room": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Entry_Simulation_Room.png",
+        "template": "../image/Ark/Entry_Simulation_Room.png",
         "action": "Click"
     },
 

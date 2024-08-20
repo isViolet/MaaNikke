@@ -1,60 +1,12 @@
 {
     "Process_Outpost": {
         "next": [
-            "Enter_Dispatch",
-            "Sub_Loading",
-            "Enter_Outpost",
-            "Sub_Process_Return_Home"
-        ]
-    },
-
-    "Enter_Dispatch": {
-        "recognition": "FeatureMatch",
-        "template": "../image/logo_enter_dispatch.png",
-        "action": "Click",
-        "roi": [300, 1400, 200, 200],
-        "next": ["No_Dispatch", "Sub_Reward"]
-    },
-
-    "No_Dispatch": {
-        "recognition": "OCR",
-        "expected": ["没有已完成的派遣"],
-        "next": ["All_Dispatch"]
-    },
-
-    "All_Dispatch": {
-        "recognition": "OCR",
-        "expected": ["全部派遣"],
-        "action": "Click",
-        "next": ["Dispatch_Finished", "Dispatch"]
-    },
-
-    "Dispatch_Finished": {
-        "recognition": "OCR",
-        "expected": ["目前没有可进行的派遣任务"],
-        "next": [
             "Outpost_Sweep",
             "Pre_Outpost_Sweep",
             "Enter_Outpost_Reward",
-            "Sub_Click_Empty"
+            "Sub_StartUpGame"
         ]
     },
-
-    "Dispatch": {
-        "recognition": "OCR",
-        "expected": ["派遣"],
-        "action": "Click",
-        "target": [451, 1225, 56, 31],
-        "next": ["All_Dispatch"]
-    },
-
-    "Enter_Outpost": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["前哨基地"],
-        "action": "Click"
-    },
-
     "Outpost_Sweep": {
         "recognition": "OCR",
         "action": "Click",
@@ -75,7 +27,7 @@
     "Enter_Outpost_Reward": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/outpost_diary.png",
+        "template": "../image/Home/outpost_diary.png",
         "action": "Click",
         "roi": [300, 1400, 200, 200]
     }
