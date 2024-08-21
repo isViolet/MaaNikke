@@ -3,8 +3,8 @@
         "next": [
             "Sub_Loading",
             "Dispatch_Finished",
-            "No_Dispatch",
-            "Sub_Reward",
+            "Dispatch_Not_Finished",
+            "Sub_Dispatch_ALL_Reward",
             "Sub_Process_Dispatch_Enter",
             "Sub_Process_Outpost_Enter",
             "Sub_StartUpGame"
@@ -14,6 +14,33 @@
     "Dispatch_Finished": {
         "recognition": "OCR",
         "expected": ["目前没有可进行的派遣任务"]
+    },
+
+    "Dispatch_Not_Finished": {
+        "recognition": "OCR",
+        "expected": ["没有已完成的派遣"],
+        "next": ["Dispatch_ALL"]
+    },
+
+    "Dispatch_ALL": {
+        "recognition": "OCR",
+        "expected": ["全部派遣"],
+        "action": "Click",
+        "next": ["Dispatch_Finished", "Dispatch"]
+    },
+
+    "Dispatch": {
+        "recognition": "OCR",
+        "expected": ["派遣"],
+        "action": "Click",
+        "target": [451, 1225, 56, 31]
+    },
+
+    "Sub_Dispatch_ALL_Reward": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["全部领取"],
+        "action": "Click"
     },
 
     "Sub_Process_Dispatch_Enter": {
@@ -29,26 +56,5 @@
         "recognition": "OCR",
         "expected": ["前哨基地"],
         "action": "Click"
-    },
-
-    "No_Dispatch": {
-        "recognition": "OCR",
-        "expected": ["没有已完成的派遣"],
-        "next": ["All_Dispatch"]
-    },
-
-    "All_Dispatch": {
-        "recognition": "OCR",
-        "expected": ["全部派遣"],
-        "action": "Click",
-        "next": ["Dispatch_Finished", "Dispatch"]
-    },
-
-    "Dispatch": {
-        "recognition": "OCR",
-        "expected": ["派遣"],
-        "action": "Click",
-        "target": [451, 1225, 56, 31],
-        "next": ["All_Dispatch"]
     }
 }

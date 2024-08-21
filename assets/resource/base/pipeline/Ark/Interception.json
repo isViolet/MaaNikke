@@ -1,15 +1,17 @@
 {
     "Process_Interception": {
         "next": [
+            "Sub_Color_Black_Loading",
             "Process_Interception_Battle",
             "Sub_Enter_Special_Interception",
             "Sub_Enter_Interceptions",
             "Sub_Enter_Ark",
-            "Interception_StartUpGame"
+            "Sub_StartUpGame"
         ]
     },
 
     "Process_Interception_Battle": {
+        "pre_delay": 2000,
         "recognition": "OCR",
         "expected": ["模拟战"],
         "next": ["Sub_Loading", "Interception_Finished", "Sub_Process_Battle"]
@@ -32,7 +34,7 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": ["拦截战"],
-        "roi": [0, 1000, 500, 500]
+        "next": ["Click_Empty"]
     },
 
     "Sub_Enter_Ark": {
@@ -40,13 +42,5 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": ["方舟"]
-    },
-
-    "Interception_StartUpGame": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["返回"],
-        "times_limit": 3,
-        "runout_next": ["StartUpGame"]
     }
 }
