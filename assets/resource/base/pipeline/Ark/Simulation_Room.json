@@ -1,21 +1,14 @@
 {
     "Process_Simulation_Room": {
         "next": [
+            "Sub_Color_Black_Loading",
+            "Sub_Color_White_Loading",
             "Process_Battle_Simulation_Room",
-            "Sub_Loading",
-            "Sub_Simulation_Room_Loading",
             "Pre_Start_The_Simulation",
             "Sub_Enter_Simulation_Room",
             "Sub_Enter_Ark",
-            "Interception_StartUpGame"
+            "Sub_StartUpGame"
         ]
-    },
-
-    "Sub_Enter_Simulation_Room": {
-        "is_sub": true,
-        "recognition": "FeatureMatch",
-        "template": "../image/Ark/Entry_Simulation_Room.png",
-        "action": "Click"
     },
 
     "Process_Battle_Simulation_Room": {
@@ -24,8 +17,8 @@
         "next": [
             "Simulation_Complete",
             "Sub_Loading",
-            "Sub_Simulation_Room_Loading",
-            "StrengthenAttributes",
+            "Sub_Color_White_Loading",
+            "SelectStrengthenAttributes",
             "Sub_Simulation_Buff",
             "Sub_Pre_Simulation_Node",
             "Sub_Process_Battle"
@@ -70,5 +63,12 @@
         "action": "Click",
         "expected": ["开始模拟"],
         "next": ["Process_Battle_Simulation_Room"]
+    },
+    "Sub_Enter_Simulation_Room": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["模拟室"],
+        "action": "Click",
+        "next": ["Click_Empty"]
     }
 }

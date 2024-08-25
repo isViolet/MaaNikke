@@ -76,9 +76,20 @@
             "../image/template/loading_TETRA.png"
         ]
     },
-    "Sub_Simulation_Room_Loading": {
+    "Sub_Color_White_Loading": {
         "is_sub": true,
-        "recognition": "FeatureMatch",
-        "template": "../image/Ark/Simulation_Room_Loading.png"
+        "recognition": "ColorMatch",
+        "lower": [222, 222, 222],
+        "upper": [255, 255, 255],
+        "count": 2000,
+        "roi": [0, 0, 50, 50]
+    },
+    "Sub_Color_Black_Loading": {
+        "is_sub": true,
+        "recognition": "ColorMatch",
+        "lower": [10, 10, 10],
+        "upper": [15, 15, 15],
+        "count": 2000,
+        "roi": [0, 0, 50, 50]
     }
 }
