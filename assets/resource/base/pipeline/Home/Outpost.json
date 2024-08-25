@@ -27,7 +27,10 @@
     "Enter_Outpost_Reward": {
         "is_sub": true,
         "recognition": "FeatureMatch",
-        "template": "../image/Home/outpost_diary.png",
+        "template": [
+            "../image/Home/outpost_diary.png",
+            "../image/Home/outpost_diary_100.png"
+        ],
         "action": "Click",
         "roi": [0, 1300, 200, 200]
     }

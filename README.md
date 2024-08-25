@@ -54,7 +54,7 @@ python -m pip install MaaDebugger MaaFW --upgrade
 adb shell "dumpsys window w |grep \/ |grep name="
 
 adb shell screencap -p /sdcard/screen.png
-adb pull /sdcard/screen.png
+adb -s 8dd1b135 pull /sdcard/screen.png
 
 netstat -ano | findstr :8080
 taskkill /F /PID 31952

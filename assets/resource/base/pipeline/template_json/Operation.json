@@ -29,8 +29,7 @@
         "is_sub": true,
         "recognition": "OCR",
         "action": "Click",
-        "expected": ["点击领取奖励", "全部领取"],
-        "next": ["Click_Empty"]
+        "expected": ["点击领取奖励", "全部领取"]
     },
 
     "Affirm": {
