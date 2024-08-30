@@ -10,7 +10,7 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": ["EPIC", "SSR", "SR", "R"],
-        "next": ["Unselected_Gain_Effect", "Sub_Affirm", "Click_Empty"]
+        "next": ["Sub_Affirm", "Click_Empty"]
     },
 
     "Unselected_Gain_Effect": {

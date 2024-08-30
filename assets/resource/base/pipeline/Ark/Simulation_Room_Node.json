@@ -2,39 +2,40 @@
     "Sub_Pre_Simulation_Node": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["RESET TIME"],
+        "expected": ["编队"],
         "next": [
             "After_Automatic_Formation",
+            "Automatic_Formation",
             "Pre_Automatic_Formation",
             "Sub_Click_Empty"
         ]
-    },
-
-    "Pre_Automatic_Formation": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": ["编队"],
-        "action": "Click",
-        "next": ["Automatic_Formation"]
-    },
-
-    "Automatic_Formation": {
-        "recognition": "OCR",
-        "expected": ["自动编队"],
-        "action": "Click",
-        "next": ["Save_Formation"]
-    },
-
-    "Save_Formation": {
-        "recognition": "OCR",
-        "expected": ["储存"],
-        "action": "Click"
     },
 
     "After_Automatic_Formation": {
         "recognition": "OCR",
         "expected": ["已储存"],
         "next": ["Check_In_Pre_Battle", "SelectBattleNode"]
+    },
+
+    "Automatic_Formation": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["自动编队"],
+        "action": "Click",
+        "next": ["Save_Formation"]
+    },
+
+    "Pre_Automatic_Formation": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": ["编队"],
+        "action": "Click"
+    },
+
+    "Save_Formation": {
+        "recognition": "OCR",
+        "expected": ["储存"],
+        "action": "Click"
     },
 
     "Check_In_Pre_Battle": {
@@ -52,7 +53,7 @@
     "StrengthenAttributes": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": ["属性提升", "改变的机会"],
+        "expected": ["属性提升", "第一个选项"],
         "action": "Click",
         "next": ["SelectStrengthenAttributes", "Click_Empty"]
     },
@@ -61,6 +62,6 @@
         "recognition": "OCR",
         "expected": ["第一个选项"],
         "action": "Click",
-        "next": ["Affirm"]
+        "next": ["Sub_Affirm", "Click_Empty"]
     }
 }

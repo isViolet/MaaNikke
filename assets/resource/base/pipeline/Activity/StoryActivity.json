@@ -1,6 +1,7 @@
 {
     "Process_StoryActivity": {
         "next": [
+            "Sub_Color_White_Loading",
             "Process_Battle_StoryActivity",
             "After_Enter_StoryActivity",
             "Enter_StoryActivity",
